@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>It's Delicious - About Us</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <style>
+    #navbar{
+        background-color: rgb(3, 3, 68);
+        color: white;
+    }
+</style>
+  
+</head>
+<body>
+
+<div id="navbar"></div>
+
+<section class="section welcome">
+  <div class="one">
+    <h2>Welcome to It's Delicious</h2>
+    <p>Experience the essence of Italy in every bite!</p>
+  </div>
+</section>
+
+<section class="section story">
+  <div class="two">
+    <h2>Our Story</h2>
+    <p>At It's Delicious, we're passionate about crafting the finest Italian cuisine to delight your senses. Our journey began with a love for authentic flavors and a dedication to culinary excellence. From classic pasta dishes to savory pizzas, each item on our menu is meticulously prepared using the freshest ingredients and traditional cooking techniques. Join us and let us take you on a culinary adventure through the flavors of Italy.</p>
+  </div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  // Load the navbar
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar').innerHTML = data;
+    });
+</script>
+</body>
+</html>

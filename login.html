@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    .login-container {
+      display: flex;
+      height: 100vh;
+      background-image: url('login.jpg'); 
+      background-size: cover;
+      background-position: center;
+      justify-content: flex-start; 
+    }
+
+    .login-form, .signup-form {
+      background: rgba(12, 12, 12,0); 
+      padding: 2rem;
+      margin: auto 2rem;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-form h1, .signup-form h1 {
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      color: #add8e6;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: #add8e6;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #cccccc78;
+      border-radius: 4px;
+      background-color: #3935352d;
+      color: white;
+    }
+
+    .form-group input:focus {
+        border-color: #007bff; 
+        color: white;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #007BFF;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .error {
+      color: red;
+      margin-bottom: 1rem;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .login-form, .signup-form {
+          margin: auto;
+          width: 90%;
+      }
+    }
+
+  </style>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    .login-container {
+      display: flex;
+      height: 100vh;
+      background-image: url('login.jpg'); 
+      background-size: cover;
+      background-position: center;
+      justify-content: flex-start; 
+    }
+
+    .login-form, .signup-form {
+      background: rgba(12, 12, 12,0); 
+      padding: 2rem;
+      margin: auto 2rem;
+      max-width: 400px;
+      width: 100%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .login-form h1, .signup-form h1 {
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      color: #add8e6;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: #add8e6;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1rem;
+      border: 1px solid #cccccc78;
+      border-radius: 4px;
+      background-color: #3935352d;
+      color: white;
+    }
+
+    .form-group input:focus {
+        border-color: #007bff; 
+        color: white;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1rem;
+      color: #fff;
+      background-color: #007BFF;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .error {
+      color: red;
+      margin-bottom: 1rem;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .logsign{
+        color: #add8e6;
+    }
+
+    a {
+      color: #fafbfc;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+
+    a:visited {
+      color: #fbfcfc;
+    }
+
+    @media (max-width: 768px) {
+      .login-form, .signup-form {
+          margin: auto;
+          width: 90%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+    <div class="login-container">
+      <div class="login-form" id="loginFormContainer">
+        <h1>Login</h1>
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="loginEmail">Email</label>
+            <input type="email" id="loginEmail" required>
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" required>
+          </div>
+          <button type="submit">Login</button>
+        </form>
+        <p class = "logsign">Don't have an account? <a href="#" id="toggleLink">Sign Up</a></p>
+      </div>
+      <div class="signup-form hidden" id="signupFormContainer">
+        <h1>Sign Up</h1>
+        <form id="signupForm">
+          <div class="form-group">
+            <label for="signupEmail">Email</label>
+            <input type="email" id="signupEmail" required>
+          </div>
+          <div class="form-group">
+            <label for="signupPassword">Password</label>
+            <input type="password" id="signupPassword" required>
+          </div>
+          <button type="submit">Sign Up</button>
+        </form>
+        <p class = "logsign">Already have an account? <a href="#" id="toggleLinkLogin">Login</a></p>
+      </div>
+    </div>
+        
+    <script>
+      const toggleLink = document.getElementById('toggleLink');
+      const loginFormContainer = document.getElementById('loginFormContainer');
+      const signupFormContainer = document.getElementById('signupFormContainer');
+      const toggleLinkLogin = document.getElementById('toggleLinkLogin');
+  
+      toggleLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        loginFormContainer.classList.toggle('hidden');
+        signupFormContainer.classList.toggle('hidden');
+  
+        if (loginFormContainer.classList.contains('hidden')) {
+          toggleLink.textContent = "Sign Up";
+        } else {
+          toggleLink.textContent = "Login";
+        }
+      });
+  
+      toggleLinkLogin.addEventListener('click', function(e) {
+        e.preventDefault();
+  
+        loginFormContainer.classList.toggle('hidden');
+        signupFormContainer.classList.toggle('hidden');
+  
+        if (loginFormContainer.classList.contains('hidden')) {
+          toggleLinkLogin.textContent = "Login";
+        } else {
+          toggleLinkLogin.textContent = "Sign Up";
+        }
+      });
+    </script>
+  </body>
+  </html>

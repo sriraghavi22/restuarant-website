@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 1000; 
+}
+
+.navbar-nav .nav-link:hover {
+    color: black; 
+}
+
+.background-container {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url(home1.jpg);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 10%;
+    padding-bottom: 5%;
+}
+
+.text-overlay {
+    text-align: left;
+    color: white;
+    font-size: 4rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    margin-top: 70px; 
+    font-family: 'Lugrasimo', sans-serif;
+}
+
+.section {
+    height: 100vh; 
+    display: flex;
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+}
+
+.section h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.section p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.one {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 25%;
+}
+
+.two {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 57%;
+    margin-top: 15%;
+    color: black;
+}
+
+.welcome {
+    background-image: url('about.jpg');
+}
+
+.story {
+    background-image: url('story.jpg');
+}
+
+.contact {
+    background-color: #333; 
+    color: #fff;
+    padding: 50px 20px; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+}
+
+.contact form {
+    max-width: 600px;
+    width: 100%;
+}
+
+.contact form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.contact form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact form .form-group input,
+.contact form .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+}
+
+.contact form .form-group textarea {
+    resize: none;
+    height: 100px;
+}
+
+.contact form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.contact form button:hover {
+    background-color: #0056b3;
+}
+
+.contact-info {
+    margin-top: 11%;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.success-message, .error-message {
+    margin-top: 20px;
+    display: none;
+    padding: 10px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.success-message {
+    background-color: #28a745;
+    color: white;
+}
+
+.error-message {
+    background-color: #dc3545;
+    color: white;
+}
+

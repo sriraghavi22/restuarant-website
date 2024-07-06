@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+  <style>
+    #navbar{
+        background-color: black;
+        color: white;
+    }
+</style>
+</head>
+<body>
+
+<div id="navbar"></div>
+
+<section class="contact">
+  <h2>Contact Us</h2>
+  <form id="contactForm" method="POST" action="contact.php">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required></textarea>
+    </div>
+    <button type="submit">Send Message</button>
+  </form>
+  <div class="contact-info">
+    <p>Address: 1234 Foodie Lane, Culinary City, CA 12345</p>
+    <p>Phone: (123) 456-7890</p>
+  </div>
+  <div class="success-message" id="successMessage">Your message has been sent successfully!</div>
+  <div class="error-message" id="errorMessage">There was an error sending your message. Please try again.</div>
+</section>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+  // Load the navbar
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar').innerHTML = data;
+    });
+
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    var formData = new FormData(event.target);
+    fetch(event.target.action, {
+      method: 'POST',
+      body: formData,
+    })
+      .then(response => {
+        if (response.ok) {
+          document.getElementById('successMessage').style.display = 'block';
+          document.getElementById('errorMessage').style.display = 'none';
+        } else {
+          document.getElementById('successMessage').style.display = 'none';
+          document.getElementById('errorMessage').style.display = 'block';
+        }
+      })
+      .catch(error => {
+        document.getElementById('successMessage').style.display = 'none';
+        document.getElementById('errorMessage').style.display = 'block';
+      });
+  });
+</script>
+</body>
+</html>
